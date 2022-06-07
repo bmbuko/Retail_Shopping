@@ -9,6 +9,25 @@ function formStart() {
         'formStatus' : "",
 		}
 }
+
+function purchase(){
+	dataLayer.push({
+			'event': 'purchase',
+			'ecommerce': {
+				'items': [
+					{
+						'item_name': '{{list.name}}',       // Name or ID is required.
+						'price': '{{list.cost}}',
+						'item_category': '{{list.category}}',
+						'quantity':'{{list.quantity}}'
+						
+						
+					}]
+			}
+		});
+	
+
+}
 </script>
 
  </script>
@@ -118,7 +137,7 @@ function formStart() {
 						</tr>
 				</tbody>
 			</table>
-			<button type="submit" class="btn btn-primary" name="price" value="/images/b.jpg">Procceed to
+			<button type="submit" class="btn btn-primary" name="price" value="/images/b.jpg" onclick="purchase()">Procceed to
 				Payment</button>
 		</div>
 		</form>
