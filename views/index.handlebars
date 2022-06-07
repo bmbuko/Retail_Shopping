@@ -4,7 +4,7 @@
 	  <title>Accel-Shopping | Home</title>
 
 	  <script type="text/javascript" language="JavaScript">
-function addToCart(){
+function viewItems(){
 		dataLayer.push({
 			'event': 'add_to_cart',
 			'ecommerce': {
@@ -13,7 +13,7 @@ function addToCart(){
 						'item_name': '{{list.name}}',       // Name or ID is required.
 						'price': '{{list.cost}}',
 						'item_category': '{{list.category}}',
-						'quantity':'{{list.quantity}}'
+						'
 						
 					}]
 			}
@@ -196,7 +196,7 @@ function addToCart(){
 
 								<div class="choose">
 									<button type="submit" class="btn btn-primary" id="Urban Find" name="price"
-										value="/images/b.jpg" onclick="addToCart()" data-id="link_content" data-text="How about now? | Tell me more button click" data-intent="Informational" data-scope="hero banner">View</button>
+										value="/images/b.jpg"  data-id="link_content" data-text="How about now? | Tell me more button click" data-intent="Informational" data-scope="hero banner">View</button>
 								</div>
 							</form>
 						</div>
@@ -261,7 +261,7 @@ function addToCart(){
 
 								<div class="choose">
 									<button type="submit" class="btn btn-primary" id="Sport Guyisa" name="price"
-										value="/images/e.jpg">View</button>
+										value="/images/e.jpg" onclick="viewItems()">View</button>
 								</div>
 							</form>
 						</div>
