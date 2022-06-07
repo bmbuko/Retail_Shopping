@@ -3,16 +3,10 @@
 	<title>Accel-Shopping | Cart Review</title>
 <script>
 
-function formStart() {
-	    var dataLayer = {
-	    'formisSubmitted' : false,
-        'formName' : 'rest',
-        'formStatus' : "",
-		}
-}
+
 function beginCheckout(){
 
-		dataLayer.push({
+dataLayer.push({
 			'event': 'begin_checkout',
 			'ecommerce': {
 				'items': [
