@@ -1,8 +1,27 @@
 <head>
 
   <title>Accel-Shopping | Payment</title>
+<script>
+function purchase(){
+	dataLayer.push({
+			'event': 'purchase',
+			'ecommerce': {
+				'items': [
+					{
+						'item_name': '{{list.name}}',       // Name or ID is required.
+						'price': '{{list.cost}}',
+						'item_category': '{{list.category}}',
+						'quantity':'{{list.quantity}}',
+						'total':'{{list.myTotal}}'
+						
+						
+					}]
+			}
+		});
+	
 
-
+}
+</script>
 
 </head>
 
@@ -77,7 +96,7 @@
 							<li>Total <span>R{{list.myTotal}}</span></li>
 						</ul>
 							
-	            <button type="submit" class="btn btn-primary" name="price" value="/images/b.jpg" 
+	            <button type="submit" class="btn btn-primary" name="price" value="/images/b.jpg" onclick="purchase()"
 				>Place Order</button>
               </form>
 					</div>
