@@ -10,6 +10,24 @@ function formStart() {
         'formStatus' : "",
 		}
 }
+function beginCheckout(){
+
+		dataLayer.push({
+			'event': 'begin_checkout',
+			'ecommerce': {
+				'items': [
+					{
+						'item_name': '{{list.name}}',       // Name or ID is required.
+						'price': '{{list.cost}}',
+						'item_category': '{{list.category}}',
+						'quantity':'{{list.quantity}}'
+						
+						
+					}]
+			}
+		});
+	
+}
 </script>
 
 </head>
@@ -117,7 +135,7 @@ function formStart() {
 						</tr>
 				</tbody>
 			</table>
-			<button type="submit" class="btn btn-primary" name="price" value="/images/b.jpg">Procceed to
+			<button type="submit" class="btn btn-primary" name="price" onclick="beginCheckout()" value="/images/b.jpg">Procceed to
 				Payment</button>
 		</div>
 		</form>
