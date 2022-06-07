@@ -2,27 +2,16 @@
 
 	<title>Accel-Shopping | Cart Review</title>
 <script>
-
-
-function beginCheckout(){
-
-dataLayer.push({
-			'event': 'begin_checkout',
-			'ecommerce': {
-				'items': [
-					{
-						'item_name': '{{list.name}}',       // Name or ID is required.
-						'price': '{{list.cost}}',
-						'item_category': '{{list.category}}',
-						'quantity':'{{list.quantity}}'
-						
-						
-					}]
-			}
-		});
-	
+function formStart() {
+	    var dataLayer = {
+	    'formisSubmitted' : false,
+        'formName' : 'rest',
+        'formStatus' : "",
+		}
 }
 </script>
+
+ </script>
 
 </head>
 
@@ -129,7 +118,7 @@ dataLayer.push({
 						</tr>
 				</tbody>
 			</table>
-			<button type="submit" class="btn btn-primary" name="price" onclick="beginCheckout()" value="/images/b.jpg">Procceed to
+			<button type="submit" class="btn btn-primary" name="price" value="/images/b.jpg">Procceed to
 				Payment</button>
 		</div>
 		</form>
