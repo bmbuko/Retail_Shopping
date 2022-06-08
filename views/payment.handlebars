@@ -2,7 +2,7 @@
 
   <title>Accel-Shopping | Payment</title>
 <script>
-function purchase(){
+
 	dataLayer.push({
 			'event': 'purchase',
 			'ecommerce': {
@@ -19,8 +19,6 @@ function purchase(){
 			}
 		});
 	
-
-}
 </script>
 
 </head>
@@ -96,7 +94,7 @@ function purchase(){
 							<li>Total <span>R{{list.myTotal}}</span></li>
 						</ul>
 							
-	            <button type="submit" class="btn btn-primary" name="price" value="/images/b.jpg" onclick="purchase()"
+	            <button type="submit" class="btn btn-primary" name="price" value="/images/b.jpg" 
 				>Place Order</button>
               </form>
 					</div>
